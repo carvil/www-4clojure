@@ -9,5 +9,11 @@
 
 (fact "Problem 20 - Penultimate Element"
   (= (penultimate-element (list 1 2 3 4 5)) 4) => true
-     (= (penultimate-element ["a" "b" "c"]) "b") => true
-     (= (penultimate-element [[1 2] [3 4]]) [1 2]) => true)
+  (= (penultimate-element ["a" "b" "c"]) "b") => true
+  (= (penultimate-element [[1 2] [3 4]]) [1 2]) => true)
+
+(fact "Problem 21 - Nth Element"
+  (= (nth-element '(4 5 6 7) 2) 6) => true
+  (= (nth-element [:a :b :c] 0) :a) => true
+  (= (nth-element [1 2 3 4] 1) 2) => true
+  (= (nth-element '([1 2] [3 4] [5 6]) 2) [5 6]) => true)

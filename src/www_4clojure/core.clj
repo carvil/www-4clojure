@@ -9,3 +9,8 @@
   "Problem 20"
   [l]
   (last (take (- (count l) 1) l)))
+
+(defn nth-element
+  "Problem 21"
+  [s n]
+  (first (drop n s)))
