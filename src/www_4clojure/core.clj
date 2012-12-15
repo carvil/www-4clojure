@@ -39,3 +39,11 @@
   "Problem 27"
   [s]
   (let [sq (seq s)] (= sq (reverse sq))))
+
+(defn fibonacci-sequence
+  "Problem 26"
+  [n]
+  (letfn [(fib
+    ([] (concat [1] (fib 0 1)))
+    ([a b] (cons (+ a b) (lazy-seq (fib b (+ a b))))))]
+    (take n (fib))))

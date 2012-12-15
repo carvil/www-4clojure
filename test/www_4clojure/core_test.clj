@@ -49,3 +49,8 @@
   (true? (palindrome-detector [:foo :bar :foo])) => true
   (true? (palindrome-detector '(1 1 3 3 1 1))) => true
   (false? (palindrome-detector '(:a :b :c))) => true)
+
+(fact "Problem 26 - Fibonacci Sequence"
+  (= (fibonacci-sequence 3) '(1 1 2)) => true
+  (= (fibonacci-sequence 6) '(1 1 2 3 5 8)) => true
+  (= (fibonacci-sequence 8) '(1 1 2 3 5 8 13 21)) => true)
