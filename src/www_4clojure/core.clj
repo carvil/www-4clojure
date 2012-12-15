@@ -29,3 +29,8 @@
   "Problem 25"
   [s]
   (filter odd? s))
+
+(defn reverse-a-sequence
+  "Problem 23"
+  [s]
+  (reduce conj '() s))
