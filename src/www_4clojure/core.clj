@@ -34,3 +34,8 @@
   "Problem 23"
   [s]
   (reduce conj '() s))
+
+(defn palindrome-detector
+  "Problem 27"
+  [s]
+  (let [sq (seq s)] (= sq (reverse sq))))

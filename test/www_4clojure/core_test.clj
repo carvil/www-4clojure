@@ -42,3 +42,10 @@
   (= (reverse-a-sequence [1 2 3 4 5]) [5 4 3 2 1]) => true
   (= (reverse-a-sequence (sorted-set 5 7 2 7)) '(7 5 2)) => true
   (= (reverse-a-sequence [[1 2][3 4][5 6]]) [[5 6][3 4][1 2]]) => true)
+
+(fact "Problem 27 - Palindrome Detector"
+  (false? (palindrome-detector '(1 2 3 4 5))) => true
+  (true? (palindrome-detector "racecar")) => true
+  (true? (palindrome-detector [:foo :bar :foo])) => true
+  (true? (palindrome-detector '(1 1 3 3 1 1))) => true
+  (false? (palindrome-detector '(:a :b :c))) => true)
