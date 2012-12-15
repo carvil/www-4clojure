@@ -1,6 +1,6 @@
 (ns www-4clojure.core)
 
-(defn foo
-  "I don't do a whole lot."
+(defn last-element
+  "Problem 19"
   [x]
-  (println x "Hello, World!"))
+  (first (drop (- (count x) 1) x)))
