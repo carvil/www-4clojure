@@ -17,3 +17,10 @@
   (= (nth-element [:a :b :c] 0) :a) => true
   (= (nth-element [1 2 3 4] 1) 2) => true
   (= (nth-element '([1 2] [3 4] [5 6]) 2) [5 6]) => true)
+
+(fact "Problem 22 - Count a Sequence"
+  (= (count-a-sequence '(1 2 3 3 1)) 5) => true
+  (= (count-a-sequence "Hello World") 11) => true
+  (= (count-a-sequence [[1 2] [3 4] [5 6]]) 3) => true
+  (= (count-a-sequence '(13)) 1) => true
+  (= (count-a-sequence '(:a :b :c)) 3) => true)

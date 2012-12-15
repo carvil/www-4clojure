@@ -14,3 +14,8 @@
   "Problem 21"
   [s n]
   (first (drop n s)))
+
+(defn count-a-sequence
+  "Problem 22"
+  [s]
+  (reduce + (map (fn [_] 1) s)))
