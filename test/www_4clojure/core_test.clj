@@ -31,3 +31,9 @@
   (= (sum-it-all-up #{4 2 1}) 7) => true
   (= (sum-it-all-up '(0 0 -1)) -1) => true
   (= (sum-it-all-up '(1 10 3)) 14) => true)
+
+(fact "Problem 25 - Find The Odd Numbers"
+  (= (find-the-odds #{1 2 3 4 5}) '(1 3 5)) => true
+  (= (find-the-odds [4 2 1 6]) '(1)) => true
+  (= (find-the-odds [2 2 4 6]) '()) => true
+  (= (find-the-odds [1 1 1 3]) '(1 1 1 3)) => true)

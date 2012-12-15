@@ -24,3 +24,8 @@
   "Problem 24"
   [s]
   (reduce + s))
+
+(defn find-the-odds
+  "Problem 25"
+  [s]
+  (filter odd? s))
