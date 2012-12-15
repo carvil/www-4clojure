@@ -19,3 +19,8 @@
   "Problem 22"
   [s]
   (reduce + (map (fn [_] 1) s)))
+
+(defn sum-it-all-up
+  "Problem 24"
+  [s]
+  (reduce + s))

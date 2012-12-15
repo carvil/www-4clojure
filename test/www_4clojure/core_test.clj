@@ -24,3 +24,10 @@
   (= (count-a-sequence [[1 2] [3 4] [5 6]]) 3) => true
   (= (count-a-sequence '(13)) 1) => true
   (= (count-a-sequence '(:a :b :c)) 3) => true)
+
+(fact "Problem 24 - Sum It All Up"
+  (= (sum-it-all-up [1 2 3]) 6) => true
+  (= (sum-it-all-up (list 0 -2 5 5)) 8) => true
+  (= (sum-it-all-up #{4 2 1}) 7) => true
+  (= (sum-it-all-up '(0 0 -1)) -1) => true
+  (= (sum-it-all-up '(1 10 3)) 14) => true)
