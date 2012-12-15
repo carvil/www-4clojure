@@ -1,10 +1,19 @@
 # www-4clojure
 
-A Clojure library designed to ... well, that part is up to you.
+Solutions for the problems listed in [4clojure](http://www.4clojure.com/).
 
 ## Usage
 
-FIXME
+In order to try the different functions, load the repl:
+
+    lein repl
+
+And then use the namespace:
+
+    user=> (use 'www-4clojure.core)
+    nil
+
+You can now use the functions defined in `www-4clojure.core` namespace.
 
 ## Test
 
