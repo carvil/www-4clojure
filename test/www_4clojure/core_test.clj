@@ -113,3 +113,9 @@
   (= (drop-every-nth [1 2 3 4 5 6 7 8] 3) [1 2 4 5 7 8]) => true
   (= (drop-every-nth [:a :b :c :d :e :f] 2) [:a :c :e]) => true
   (= (drop-every-nth [1 2 3 4 5 6] 4) [1 2 3 5 6]) => true)
+
+(fact "Problem 42 - Factorial"
+  (= (factorial 1) 1) => true
+  (= (factorial 3) 6) => true
+  (= (factorial 5) 120) => true
+  (= (factorial 8) 40320) => true)

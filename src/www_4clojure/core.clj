@@ -148,3 +148,10 @@
   "Problem 41 - Drop every nth element"
   [s n]
   (mapcat #(drop-last-if-same-size n %) (partition-all n s)))
+
+(defn factorial
+  "Problem 42 - Factorial"
+  [n]
+  (if (= n 0)
+    1
+    (* n (factorial (- n 1)))))
