@@ -54,3 +54,8 @@
   (= (fibonacci-sequence 3) '(1 1 2)) => true
   (= (fibonacci-sequence 6) '(1 1 2 3 5 8)) => true
   (= (fibonacci-sequence 8) '(1 1 2 3 5 8 13 21)) => true)
+
+(fact "Problem 28 - Flatten a Sequence"
+  (= (flatten-seq '((1 2) 3 [4 [5 6]])) '(1 2 3 4 5 6)) => true
+  (= (flatten-seq ["a" ["b"] "c"]) '("a" "b" "c")) => true
+  (= (flatten-seq '((((:a))))) '(:a)) => true)

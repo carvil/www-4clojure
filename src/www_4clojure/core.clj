@@ -47,3 +47,14 @@
     ([] (concat [1] (fib 0 1)))
     ([a b] (cons (+ a b) (lazy-seq (fib b (+ a b))))))]
     (take n (fib))))
+
+(defn flatten-seq
+  "Problem 28 - Flatten a Sequence"
+  [s]
+  (lazy-seq
+    (if (empty? s)
+      s
+      (let [[head & tail] s]
+        (if (sequential? head)
+          (concat (flatten-seq head) (flatten-seq tail))
+          (cons head (flatten-seq tail)))))))
