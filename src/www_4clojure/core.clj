@@ -136,3 +136,15 @@
   [sep s]
   (let [sep-seq (repeat (count s) sep)]
     (drop-last (interleave s sep-seq))))
+
+(defn drop-last-if-same-size
+  "Drops last element of sequence if predicate is true"
+  [n l]
+  (if (= n (count l))
+    (drop-last l)
+    l))
+
+(defn drop-every-nth
+  "Problem 41 - Drop every nth element"
+  [s n]
+  (mapcat #(drop-last-if-same-size n %) (partition-all n s)))

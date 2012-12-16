@@ -108,3 +108,8 @@
   (= (interpose-seq 0 [1 2 3]) [1 0 2 0 3]) => true
   (= (apply str (interpose-seq ", " ["one" "two" "three"])) "one, two, three") => true
   (= (interpose-seq :z [:a :b :c :d]) [:a :z :b :z :c :z :d]) => true)
+
+(fact "Problem 41 - Drop every nth element"
+  (= (drop-every-nth [1 2 3 4 5 6 7 8] 3) [1 2 4 5 7 8]) => true
+  (= (drop-every-nth [:a :b :c :d :e :f] 2) [:a :c :e]) => true
+  (= (drop-every-nth [1 2 3 4 5 6] 4) [1 2 3 5 6]) => true)
