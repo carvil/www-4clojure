@@ -155,3 +155,8 @@
   (if (= n 0)
     1
     (* n (factorial (- n 1)))))
+
+(defn reverse-interleave
+  "Problem 43 - Reverse interleave"
+  [s n]
+  (apply map list (partition-all n s)))
