@@ -130,3 +130,9 @@
   "Problem 30 - Interleave two sequences"
   [s1 s2]
   (flatten (map vector s1 s2)))
+
+(defn interpose-seq
+  "Problem 40 - Interpose a sequence"
+  [sep s]
+  (let [sep-seq (repeat (count s) sep)]
+    (drop-last (interleave s sep-seq))))

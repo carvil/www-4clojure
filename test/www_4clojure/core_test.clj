@@ -103,3 +103,8 @@
   (= (interleave-seqs [1 2] [3 4 5 6]) '(1 3 2 4)) => true
   (= (interleave-seqs [1 2 3 4] [5]) [1 5]) => true
   (= (interleave-seqs [30 20] [25 15]) [30 25 20 15]) => true)
+
+(fact "Problem 40 - Interpose a sequence"
+  (= (interpose-seq 0 [1 2 3]) [1 0 2 0 3]) => true
+  (= (apply str (interpose-seq ", " ["one" "two" "three"])) "one, two, three") => true
+  (= (interpose-seq :z [:a :b :c :d]) [:a :z :b :z :c :z :d]) => true)
