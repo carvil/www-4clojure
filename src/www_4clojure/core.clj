@@ -84,16 +84,6 @@
           tail (drop (count sub-list) s)]
       (cons sub-list (pack-seq tail)))))
 
-(defn dup-seq
-  "Problem 32 - Duplicate a sequence"
-  [s]
-  (loop [original s, result []]
-    (if (seq original)
-      (recur
-        (rest original)
-        (concat result (repeat 2 (first original))))
-    result)))
-
 (defn replicate-seq
   "Problem 33 - Replicate a sequence"
   [s n]
@@ -103,3 +93,8 @@
         (rest original)
         (concat result (repeat n (first original))))
     result)))
+
+(defn dup-seq
+  "Problem 32 - Duplicate a sequence"
+  [s]
+  (replicate-seq s 2))
