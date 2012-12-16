@@ -64,3 +64,8 @@
   (= (get-the-caps "HeLlO, WoRlD!") "HLOWRD") => true
   (empty? (get-the-caps "nothing")) => true
   (= (get-the-caps "$#A(*&987Zf") "AZ") => true)
+
+(fact "Problem 30 - Compress a Sequence"
+  (= (apply str (compress-seq "Leeeeeerrroyyy")) "Leroy") => true
+  (= (compress-seq [1 1 2 3 3 2 2 3]) '(1 2 3 2 3)) => true
+  (= (compress-seq [[1 2] [1 2] [3 4] [1 2]]) '([1 2] [3 4] [1 2])) => true)

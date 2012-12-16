@@ -63,3 +63,13 @@
   "Problem 29 - Get the Caps"
   [s]
   (apply str (filter (fn [c] (java.lang.Character/isUpperCase c)) (seq s))))
+
+(defn compress-seq
+  "Problem 30 - Compress a Sequence"
+  [s]
+  (if (empty? s)
+    []
+    (let [[head & tail] s]
+    (if (= head (first tail))
+      (compress-seq tail)
+      (cons head (compress-seq tail))))))
