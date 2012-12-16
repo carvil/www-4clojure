@@ -73,3 +73,13 @@
     (if (= head (first tail))
       (compress-seq tail)
       (cons head (compress-seq tail))))))
+
+(defn pack-seq
+  "Problem 31 - Pack a Sequence"
+  [s]
+  (if (empty? s)
+    []
+    (let [head (first s)
+          sub-list (take-while #(= head %) s)
+          tail (drop (count sub-list) s)]
+      (cons sub-list (pack-seq tail)))))

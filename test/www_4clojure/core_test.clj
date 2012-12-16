@@ -69,3 +69,8 @@
   (= (apply str (compress-seq "Leeeeeerrroyyy")) "Leroy") => true
   (= (compress-seq [1 1 2 3 3 2 2 3]) '(1 2 3 2 3)) => true
   (= (compress-seq [[1 2] [1 2] [3 4] [1 2]]) '([1 2] [3 4] [1 2])) => true)
+
+(fact "Problem 31 - Pack a Sequence"
+  (= (pack-seq [1 1 2 1 1 1 3 3]) '((1 1) (2) (1 1 1) (3 3))) => true
+  (= (pack-seq [:a :a :b :b :c]) '((:a :a) (:b :b) (:c))) => true
+  (= (pack-seq [[1 2] [1 2] [3 4]]) '(([1 2] [1 2]) ([3 4]))) => true)
