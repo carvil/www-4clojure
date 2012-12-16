@@ -83,3 +83,13 @@
           sub-list (take-while #(= head %) s)
           tail (drop (count sub-list) s)]
       (cons sub-list (pack-seq tail)))))
+
+(defn dup-seq
+  "Problem 32 - Duplicate a sequence"
+  [s]
+  (loop [original s, result []]
+    (if (seq original)
+      (recur
+        (rest original)
+        (concat result (repeat 2 (first original))))
+    result)))

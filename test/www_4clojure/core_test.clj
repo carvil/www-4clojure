@@ -74,3 +74,9 @@
   (= (pack-seq [1 1 2 1 1 1 3 3]) '((1 1) (2) (1 1 1) (3 3))) => true
   (= (pack-seq [:a :a :b :b :c]) '((:a :a) (:b :b) (:c))) => true
   (= (pack-seq [[1 2] [1 2] [3 4]]) '(([1 2] [1 2]) ([3 4]))) => true)
+
+(fact "Problem 32 - Duplicate a Sequence"
+  (= (dup-seq [1 2 3]) '(1 1 2 2 3 3)) => true
+  (= (dup-seq [:a :a :b :b]) '(:a :a :a :a :b :b :b :b)) => true
+  (= (dup-seq [[1 2] [3 4]]) '([1 2] [1 2] [3 4] [3 4])) => true
+  (= (dup-seq [[1 2] [3 4]]) '([1 2] [1 2] [3 4] [3 4])) => true)
