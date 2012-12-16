@@ -2,6 +2,8 @@
 
 Solutions for the problems listed in [4clojure](http://www.4clojure.com/).
 
+[![Build Status](https://travis-ci.org/carvil/www-4clojure.png)](https://travis-ci.org/carvil/www-4clojure)
+
 ## Usage
 
 In order to try the different functions, load the repl:
