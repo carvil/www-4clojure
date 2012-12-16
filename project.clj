@@ -9,4 +9,5 @@
     "conjars" "http://conjars.org/repo"}
   :profiles {:dev
             {:dependencies [[midje "1.4.0"]
+                            [lein-midje "1.0.10"]
                            [com.stuartsierra/lazytest "1.2.3"]]}})
