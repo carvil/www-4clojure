@@ -160,3 +160,8 @@
   "Problem 43 - Reverse interleave"
   [s n]
   (apply map list (partition-all n s)))
+
+(defn rotate-sequence
+  "Problem 44 - Rotate a Sequence"
+  [n s]
+  (flatten (reverse (split-at (mod n (count s)) s))))
