@@ -3,6 +3,4 @@ lein: lein2
 jdk:
   - openjdk7
   - openjdk6
-script: lein2 midje
-before_install:
-  - lein2 bootstrap
+script: lein midje
