@@ -98,3 +98,14 @@
   "Problem 32 - Duplicate a sequence"
   [s]
   (replicate-seq s 2))
+
+(defn my-range
+  "problem 34 - implement range"
+  [f t]
+  (loop [from f, to t, result []]
+    (if (not= from to)
+      (recur
+        (+ from 1)
+        t
+        (conj result from))
+      result)))

@@ -87,3 +87,8 @@
   (= (replicate-seq [4 5 6] 1) '(4 5 6)) => true
   (= (replicate-seq [[1 2] [3 4]] 2) '([1 2] [1 2] [3 4] [3 4])) => true
   (= (replicate-seq [44 33] 2) [44 44 33 33]) => true)
+
+(fact "Problem 34 - Implement range"
+  (= (my-range 1 4) '(1 2 3)) => true
+  (= (my-range -2 2) '(-2 -1 0 1)) => true
+  (= (my-range 5 8) '(5 6 7)) => true)
