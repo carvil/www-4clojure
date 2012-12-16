@@ -58,3 +58,8 @@
         (if (sequential? head)
           (concat (flatten-seq head) (flatten-seq tail))
           (cons head (flatten-seq tail)))))))
+
+(defn get-the-caps
+  "Problem 29 - Get the Caps"
+  [s]
+  (apply str (filter (fn [c] (java.lang.Character/isUpperCase c)) (seq s))))

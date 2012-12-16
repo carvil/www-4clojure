@@ -59,3 +59,8 @@
   (= (flatten-seq '((1 2) 3 [4 [5 6]])) '(1 2 3 4 5 6)) => true
   (= (flatten-seq ["a" ["b"] "c"]) '("a" "b" "c")) => true
   (= (flatten-seq '((((:a))))) '(:a)) => true)
+
+(fact "Problem 29 - Get the Caps"
+  (= (get-the-caps "HeLlO, WoRlD!") "HLOWRD") => true
+  (empty? (get-the-caps "nothing")) => true
+  (= (get-the-caps "$#A(*&987Zf") "AZ") => true)
