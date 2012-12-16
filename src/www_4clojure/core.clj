@@ -125,3 +125,8 @@
   ([] nil)
   ([x] x)
   ([x & others] (foldl x (fn [a,b] (if (> a b) a b)) (seq others))))
+
+(defn interleave-seqs
+  "Problem 30 - Interleave two sequences"
+  [s1 s2]
+  (flatten (map vector s1 s2)))

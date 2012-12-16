@@ -97,3 +97,9 @@
   (= (maximum-val 1 8 3 4) 8) => true
   (= (maximum-val 30 20) 30) => true
   (= (maximum-val 45 67 11) 67) => true)
+
+(fact "Problem 39 - Interleave two sequences"
+  (= (interleave-seqs [1 2 3] [:a :b :c]) '(1 :a 2 :b 3 :c)) => true
+  (= (interleave-seqs [1 2] [3 4 5 6]) '(1 3 2 4)) => true
+  (= (interleave-seqs [1 2 3 4] [5]) [1 5]) => true
+  (= (interleave-seqs [30 20] [25 15]) [30 25 20 15]) => true)
