@@ -93,3 +93,13 @@
         (rest original)
         (concat result (repeat 2 (first original))))
     result)))
+
+(defn replicate-seq
+  "Problem 33 - Replicate a sequence"
+  [s n]
+  (loop [original s, result []]
+    (if (seq original)
+      (recur
+        (rest original)
+        (concat result (repeat n (first original))))
+    result)))
