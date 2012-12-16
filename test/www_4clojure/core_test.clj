@@ -131,3 +131,9 @@
   (= (rotate-sequence 6 [1 2 3 4 5]) '(2 3 4 5 1)) => true
   (= (rotate-sequence 1 '(:a :b :c)) '(:b :c :a)) => true
   (= (rotate-sequence -4 '(:a :b :c)) '(:c :a :b)) => true)
+
+(fact "Problem 46 - Flipping out"
+  (= 3 ((flipping-out nth) 2 [1 2 3 4 5])) => true
+  (= true ((flipping-out >) 7 8)) => true
+  (= 4 ((flipping-out quot) 2 8)) => true
+  (= [1 2 3] ((flipping-out take) [1 2 3 4 5] 3)) => true)

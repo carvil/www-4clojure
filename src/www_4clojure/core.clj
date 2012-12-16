@@ -165,3 +165,8 @@
   "Problem 44 - Rotate a Sequence"
   [n s]
   (flatten (reverse (split-at (mod n (count s)) s))))
+
+(defn flipping-out
+  "Problem 46 - Flipping out"
+  [function]
+  (fn [& args] (apply function (reverse args))))
