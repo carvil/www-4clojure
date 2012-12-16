@@ -109,3 +109,19 @@
         t
         (conj result from))
       result)))
+
+(defn foldl
+  "Implementation of foldl in clojure"
+  [acc predicate l]
+  (if (empty? l)
+    acc
+    (recur
+      (predicate acc (first l))
+      predicate
+      (drop 1 l))))
+
+(defn maximum-val
+  "Problem 38 - maximum value"
+  ([] nil)
+  ([x] x)
+  ([x & others] (foldl x (fn [a,b] (if (> a b) a b)) (seq others))))

@@ -92,3 +92,8 @@
   (= (my-range 1 4) '(1 2 3)) => true
   (= (my-range -2 2) '(-2 -1 0 1)) => true
   (= (my-range 5 8) '(5 6 7)) => true)
+
+(fact "Problem 38 - Maximum value"
+  (= (maximum-val 1 8 3 4) 8) => true
+  (= (maximum-val 30 20) 30) => true
+  (= (maximum-val 45 67 11) 67) => true)
