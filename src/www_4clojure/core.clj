@@ -170,3 +170,8 @@
   "Problem 46 - Flipping out"
   [function]
   (fn [& args] (apply function (reverse args))))
+
+(defn split-a-sequence
+  "Problem 49 - Split a sequence"
+  [n s]
+  (list (take n s) (drop n s)))

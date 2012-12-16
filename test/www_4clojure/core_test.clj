@@ -137,3 +137,8 @@
   (= true ((flipping-out >) 7 8)) => true
   (= 4 ((flipping-out quot) 2 8)) => true
   (= [1 2 3] ((flipping-out take) [1 2 3 4 5] 3)) => true)
+
+(fact "Problem 49 - Split a Sequence"
+  (= (split-a-sequence 3 [1 2 3 4 5 6]) [[1 2 3] [4 5 6]]) => true
+  (= (split-a-sequence 1 [:a :b :c :d]) [[:a] [:b :c :d]]) => true
+  (= (split-a-sequence 2 [[1 2] [3 4] [5 6]]) [[[1 2] [3 4]] [[5 6]]]) => true)
