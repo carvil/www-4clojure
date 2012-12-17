@@ -147,3 +147,8 @@
   (true?  (a-nil-key :a {:a nil :b 2})) => true
   (false? (a-nil-key :b {:a nil :b 2})) => true
   (false? (a-nil-key :c {:a nil :b 2})) => true)
+
+(fact "Problem 156 - Map defaults"
+  (= (map-defaults 0 [:a :b :c]) {:a 0 :b 0 :c 0}) => true
+  (= (map-defaults "x" [1 2 3]) {1 "x" 2 "x" 3 "x"}) => true
+  (= (map-defaults [:a :b] [:foo :bar]) {:foo [:a :b] :bar [:a :b]}) => true)

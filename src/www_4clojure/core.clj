@@ -180,3 +180,8 @@
   "Problem 134 - A nil key"
   [k m]
   (and (contains? m k) (= (get m k) nil)))
+
+(defn map-defaults
+  "Problem 156 - Map defaults"
+  [v s]
+  (zipmap s (repeat (count s) v)))
