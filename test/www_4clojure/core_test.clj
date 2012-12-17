@@ -142,3 +142,8 @@
   (= (split-a-sequence 3 [1 2 3 4 5 6]) [[1 2 3] [4 5 6]]) => true
   (= (split-a-sequence 1 [:a :b :c :d]) [[:a] [:b :c :d]]) => true
   (= (split-a-sequence 2 [[1 2] [3 4] [5 6]]) [[[1 2] [3 4]] [[5 6]]]) => true)
+
+(fact "Problem 134 - A nil key"
+  (true?  (a-nil-key :a {:a nil :b 2})) => true
+  (false? (a-nil-key :b {:a nil :b 2})) => true
+  (false? (a-nil-key :c {:a nil :b 2})) => true)

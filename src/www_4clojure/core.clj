@@ -175,3 +175,8 @@
   "Problem 49 - Split a sequence"
   [n s]
   (list (take n s) (drop n s)))
+
+(defn a-nil-key
+  "Problem 134 - A nil key"
+  [k m]
+  (and (contains? m k) (= (get m k) nil)))
