@@ -185,3 +185,8 @@
          ((simple-closure 8) 2)) => true
   (= [1 8 27 64] (map (simple-closure 3) [1 2 3 4])) => true
   (= [1 2 4 8 16] (map #((simple-closure %) 2) [0 1 2 3 4])) => true)
+
+(fact "Problem 99 - product digits"
+  (= (product-digits 1 1) [1]) => true
+  (= (product-digits 99 9) [8 9 1]) => true
+  (= (product-digits 999 99) [9 8 9 0 1]) => true)

@@ -225,3 +225,8 @@
   "Problem 107 - simple closure"
   [n]
   (fn [x] (exp x n)))
+
+(defn product-digits
+  "Problem 99 - product digits"
+  [a b]
+  (map (fn [c] (Integer. (str c))) (seq (str (* a b)))))
