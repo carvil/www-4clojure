@@ -185,3 +185,10 @@
   "Problem 156 - Map defaults"
   [v s]
   (zipmap s (repeat (count s) v)))
+
+(defn derive-comparison
+  "Problem 166 - Comparions"
+  [op item1 item2]
+  (cond (op item1 item2) :lt
+        (op item2 item1) :gt
+        :else :eq))

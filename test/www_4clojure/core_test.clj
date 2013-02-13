@@ -152,3 +152,9 @@
   (= (map-defaults 0 [:a :b :c]) {:a 0 :b 0 :c 0}) => true
   (= (map-defaults "x" [1 2 3]) {1 "x" 2 "x" 3 "x"}) => true
   (= (map-defaults [:a :b] [:foo :bar]) {:foo [:a :b] :bar [:a :b]}) => true)
+
+(fact "Problem 166 - Comparisons"
+  (= :gt (derive-comparison < 5 1)) => true
+  (= :eq (derive-comparison (fn [x y] (< (count x) (count y))) "pear" "plum")) => true
+  (= :lt (derive-comparison (fn [x y] (< (mod x 5) (mod y 5))) 21 3)) => true
+  (= :gt (derive-comparison > 0 2)))
