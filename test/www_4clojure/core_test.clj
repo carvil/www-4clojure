@@ -179,3 +179,9 @@
   (= (take 5 (infinite-seq #(* 2 %) 1)) [1 2 4 8 16]) => true
   (= (take 100 (infinite-seq inc 0)) (take 100 (range))) => true
   (= (take 9 (infinite-seq #(inc (mod % 3)) 1)) (take 9 (cycle [1 2 3]))) => true)
+
+(fact "Problem 107 - simple closure"
+  (= 256 ((simple-closure 2) 16),
+         ((simple-closure 8) 2)) => true
+  (= [1 8 27 64] (map (simple-closure 3) [1 2 3 4])) => true
+  (= [1 2 4 8 16] (map #((simple-closure %) 2) [0 1 2 3 4])) => true)

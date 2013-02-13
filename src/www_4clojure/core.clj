@@ -216,3 +216,12 @@
   [f x]
   (let [appl (f x)]
     (cons x (lazy-seq (infinite-seq f appl)))))
+
+(defn exp
+  "Exponentiation"
+  [x n] (reduce * (repeat n x)))
+
+(defn simple-closure
+  "Problem 107 - simple closure"
+  [n]
+  (fn [x] (exp x n)))
