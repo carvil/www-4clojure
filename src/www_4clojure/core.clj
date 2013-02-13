@@ -210,3 +210,9 @@
   "Problem 81 - set intersection"
   [s1 s2]
   (clojure.set/select (fn [e] (contains? s2 e)) s1))
+
+(defn infinite-seq
+  "Problem 62 - Re-implement Iterate"
+  [f x]
+  (let [appl (f x)]
+    (cons x (lazy-seq (infinite-seq f appl)))))

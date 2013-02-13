@@ -174,3 +174,8 @@
   (= (my-intersection #{0 1 2 3} #{2 3 4 5}) #{2 3}) => true
   (= (my-intersection #{0 1 2} #{3 4 5}) #{}) => true
   (= (my-intersection #{:a :b :c :d} #{:c :e :a :f :d}) #{:a :c :d}) => true)
+
+(fact "Problem 62 - Re-implement Iterate"
+  (= (take 5 (infinite-seq #(* 2 %) 1)) [1 2 4 8 16]) => true
+  (= (take 100 (infinite-seq inc 0)) (take 100 (range))) => true
+  (= (take 9 (infinite-seq #(inc (mod % 3)) 1)) (take 9 (cycle [1 2 3]))) => true)
