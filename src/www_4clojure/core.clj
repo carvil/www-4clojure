@@ -235,3 +235,13 @@
   "Problem 122 - Read a binary number"
   [bin]
   (reduce + (map-indexed (fn [idx item] (* (Integer. (str item)) (exp 2 idx))) (reverse bin))))
+
+(defn dot-product
+  "Problem 143 - Dot product"
+  [s1 s2]
+  (loop [memo []
+         my-s1 s1
+         my-s2 s2]
+    (if (empty? my-s1)
+      (reduce + memo)
+      (recur (conj memo (* (first my-s1) (first my-s2))) (rest my-s1) (rest my-s2)))))

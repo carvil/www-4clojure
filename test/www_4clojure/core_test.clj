@@ -199,3 +199,9 @@
   (= 255   (read-bin "11111111")) => true
   (= 1365  (read-bin "10101010101")) => true
   (= 65535 (read-bin "1111111111111111")) => true)
+
+(fact "Problem 143 - dot product"
+  (= 0 (dot-product [0 1 0] [1 0 0])) => true
+  (= 3 (dot-product [1 1 1] [1 1 1])) => true
+  (= 32 (dot-product [1 2 3] [4 5 6])) => true
+  (= 256 (dot-product [2 5 6] [100 10 1])) => true)
