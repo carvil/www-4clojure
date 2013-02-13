@@ -163,3 +163,9 @@
   (= (map-cons [:a :b :c] [1 2 3]) {:a 1, :b 2, :c 3}) => true
   (= (map-cons [1 2 3 4] ["one" "two" "three"]) {1 "one", 2 "two", 3 "three"}) => true
   (= (map-cons [:foo :bar] ["foo" "bar" "baz"]) {:foo "foo", :bar "bar"}) => true)
+
+(fact "Problem 66 - Greatest Common Divisor"
+  (= (gcd 2 4) 2) => true
+  (= (gcd 10 5) 5) => true
+  (= (gcd 5 7) 1) => true
+  (= (gcd 1023 858) 33) => true)

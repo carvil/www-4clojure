@@ -197,3 +197,10 @@
   "Problem 61 - Map construction"
   [ks vs]
   (apply assoc {} (interleave ks vs)))
+
+(defn gcd
+  "Problem 66 - Greatest Common Divisor using Euclidean algorithm"
+  [a b]
+  (if (= b 0)
+    a
+    (recur b (mod a b))))
