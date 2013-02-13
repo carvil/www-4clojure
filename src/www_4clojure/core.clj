@@ -192,3 +192,8 @@
   (cond (op item1 item2) :lt
         (op item2 item1) :gt
         :else :eq))
+
+(defn map-cons
+  "Problem 61 - Map construction"
+  [ks vs]
+  (apply assoc {} (interleave ks vs)))

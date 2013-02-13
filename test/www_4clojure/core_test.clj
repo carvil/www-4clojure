@@ -158,3 +158,8 @@
   (= :eq (derive-comparison (fn [x y] (< (count x) (count y))) "pear" "plum")) => true
   (= :lt (derive-comparison (fn [x y] (< (mod x 5) (mod y 5))) 21 3)) => true
   (= :gt (derive-comparison > 0 2)))
+
+(fact "Problem 61 - Map construction"
+  (= (map-cons [:a :b :c] [1 2 3]) {:a 1, :b 2, :c 3}) => true
+  (= (map-cons [1 2 3 4] ["one" "two" "three"]) {1 "one", 2 "two", 3 "three"}) => true
+  (= (map-cons [:foo :bar] ["foo" "bar" "baz"]) {:foo "foo", :bar "bar"}) => true)
