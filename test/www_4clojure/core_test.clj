@@ -205,3 +205,9 @@
   (= 3 (dot-product [1 1 1] [1 1 1])) => true
   (= 32 (dot-product [1 2 3] [4 5 6])) => true
   (= 256 (dot-product [2 5 6] [100 10 1])) => true)
+
+(fact "Problem 135 - infix calculator"
+  (= 7  (infix 2 + 5)) => true
+  (= 42 (infix 38 + 48 - 2 / 2)) => true
+  (= 8  (infix 10 / 2 - 1 * 2)) => true
+  (= 72 (infix 20 / 2 + 2 + 4 + 8 - 6 - 10 * 9)) => true)

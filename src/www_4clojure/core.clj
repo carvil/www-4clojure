@@ -245,3 +245,12 @@
     (if (empty? my-s1)
       (reduce + memo)
       (recur (conj memo (* (first my-s1) (first my-s2))) (rest my-s1) (rest my-s2)))))
+
+(defn infix
+  "Problem 135 - infix calculator"
+  [& args]
+  (loop [my-args args]
+    (if (= 1 (count my-args))
+      (first my-args)
+      (let [[a op b & more] my-args]
+        (recur (cons (op a b) more))))))
