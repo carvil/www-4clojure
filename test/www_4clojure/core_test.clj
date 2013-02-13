@@ -169,3 +169,8 @@
   (= (gcd 10 5) 5) => true
   (= (gcd 5 7) 1) => true
   (= (gcd 1023 858) 33) => true)
+
+(fact "Problem 81 - Set intersection"
+  (= (my-intersection #{0 1 2 3} #{2 3 4 5}) #{2 3}) => true
+  (= (my-intersection #{0 1 2} #{3 4 5}) #{}) => true
+  (= (my-intersection #{:a :b :c :d} #{:c :e :a :f :d}) #{:a :c :d}) => true)

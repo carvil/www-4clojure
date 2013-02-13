@@ -1,4 +1,5 @@
-(ns www-4clojure.core)
+(ns www-4clojure.core
+  (:require clojure.set))
 
 (defn last-element
   "Problem 19"
@@ -204,3 +205,8 @@
   (if (= b 0)
     a
     (recur b (mod a b))))
+
+(defn my-intersection
+  "Problem 81 - set intersection"
+  [s1 s2]
+  (clojure.set/select (fn [e] (contains? s2 e)) s1))
