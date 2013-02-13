@@ -230,3 +230,8 @@
   "Problem 99 - product digits"
   [a b]
   (map (fn [c] (Integer. (str c))) (seq (str (* a b)))))
+
+(defn read-bin
+  "Problem 122 - Read a binary number"
+  [bin]
+  (reduce + (map-indexed (fn [idx item] (* (Integer. (str item)) (exp 2 idx))) (reverse bin))))

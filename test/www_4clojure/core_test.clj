@@ -190,3 +190,12 @@
   (= (product-digits 1 1) [1]) => true
   (= (product-digits 99 9) [8 9 1]) => true
   (= (product-digits 999 99) [9 8 9 0 1]) => true)
+
+(fact "Problem 122 - read a binary number"
+  (= 0     (read-bin "0")) => true
+  (= 7     (read-bin "111")) => true
+  (= 8     (read-bin "1000")) => true
+  (= 9     (read-bin "1001")) => true
+  (= 255   (read-bin "11111111")) => true
+  (= 1365  (read-bin "10101010101")) => true
+  (= 65535 (read-bin "1111111111111111")) => true)
