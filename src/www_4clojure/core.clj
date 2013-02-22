@@ -254,3 +254,10 @@
       (first my-args)
       (let [[a op b & more] my-args]
         (recur (cons (op a b) more))))))
+
+(defn my-map
+  "Re-implement Map"
+  [f lst]
+  (if (empty? lst)
+      lst
+      (cons (f (first lst)) (lazy-seq (my-map f (rest lst))))))

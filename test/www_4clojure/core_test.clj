@@ -211,3 +211,11 @@
   (= 42 (infix 38 + 48 - 2 / 2)) => true
   (= 8  (infix 10 / 2 - 1 * 2)) => true
   (= 72 (infix 20 / 2 + 2 + 4 + 8 - 6 - 10 * 9)) => true)
+
+(fact "Problem 118 - Re-implement map"
+  (= [3 4 5 6 7] (my-map inc [2 3 4 5 6])) => true
+  (= (repeat 10 nil) (my-map (fn [_] nil) (range 10))) => true
+  (= [1000000 1000001]
+   (->> (my-map inc (range))
+        (drop (dec 1000000))
+        (take 2))) => true)
