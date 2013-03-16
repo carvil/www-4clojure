@@ -285,3 +285,10 @@
   (if (every? true? args)
     false
     (or (some true? args) false)))
+
+(defn symmetric-diff
+  "Problem 88 - Symetric difference between sets"
+  [s1 s2]
+  (let [diff-s1 (clojure.set/difference s1 s2)
+        diff-s2 (clojure.set/difference s2 s1)]
+    (clojure.set/union diff-s1 diff-s2)))
