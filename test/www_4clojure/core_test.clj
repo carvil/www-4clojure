@@ -224,3 +224,9 @@
   (= (indexing-seq [:a :b :c]) [[:a 0] [:b 1] [:c 2]]) => true
   (= (indexing-seq [0 1 3]) '((0 0) (1 1) (3 2))) => true
   (= (indexing-seq [[:foo] {:bar :baz}]) [[[:foo] 0] [{:bar :baz} 1]]) => true)
+
+(fact "Problem 120 - Sum of square of digits"
+  (= 8 (sum-sq-digits (range 10))) => true
+  (= 19 (sum-sq-digits (range 30))) => true
+  (= 50 (sum-sq-digits (range 100))) => true
+  (= 50 (sum-sq-digits (range 1000))) => true)

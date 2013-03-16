@@ -266,3 +266,15 @@
   "Problem 157 - Indexing sequences"
   [s]
   (map-indexed (fn [idx item] [item idx]) s))
+
+(defn sum-sq-digits
+  "Problem 120 - Sum of square of digits"
+  [s]
+  (letfn [(num-to-digits [n]
+            (map (fn [d] (Character/digit d 10)) (str n)))
+          (sum-sq [l]
+            (apply + (map (fn [x] (* x x)) l)))
+          (is-smaller? [d]
+            (let [sum (sum-sq (num-to-digits d))]
+              (< d sum)))]
+    (count (filter #{true} (map is-smaller? s)))))
