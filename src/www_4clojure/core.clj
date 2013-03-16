@@ -278,3 +278,10 @@
             (let [sum (sum-sq (num-to-digits d))]
               (< d sum)))]
     (count (filter #{true} (map is-smaller? s)))))
+
+(defn half-truth
+  "Problem 83 - a half truth"
+  [& args]
+  (if (every? true? args)
+    false
+    (or (some true? args) false)))

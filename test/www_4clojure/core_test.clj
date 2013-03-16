@@ -230,3 +230,11 @@
   (= 19 (sum-sq-digits (range 30))) => true
   (= 50 (sum-sq-digits (range 100))) => true
   (= 50 (sum-sq-digits (range 1000))) => true)
+
+(fact "Problem 83 - a half truth"
+  (= false (half-truth false false)) => true
+  (= true (half-truth true false)) => true
+  (= false (half-truth true)) => true
+  (= true (half-truth false true false)) => true
+  (= false (half-truth true true true)) => true
+  (= true (half-truth true true true false)) => true)
