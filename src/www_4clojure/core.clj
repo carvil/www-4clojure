@@ -261,3 +261,8 @@
   (if (empty? lst)
       lst
       (cons (f (first lst)) (lazy-seq (my-map f (rest lst))))))
+
+(defn indexing-seq
+  "Problem 157 - Indexing sequences"
+  [s]
+  (map-indexed (fn [idx item] [item idx]) s))
