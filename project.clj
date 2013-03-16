@@ -7,8 +7,7 @@
   :repositories {
     "stuart" "http://stuartsierra.com/maven2"
     "conjars" "http://conjars.org/repo"}
-  :dev-dependencies [[midje "1.4.0"]
-                     [lein-midje "1.0.10"]]
   :profiles {:dev
-            {:dependencies [[midje "1.4.0"]
+            {:plugins      [[lein-midje "3.0.0"]]
+             :dependencies [[midje "1.5.0"]
                             [com.stuartsierra/lazytest "1.2.3"]]}})
