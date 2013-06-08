@@ -292,3 +292,19 @@
   (let [diff-s1 (clojure.set/difference s1 s2)
         diff-s2 (clojure.set/difference s2 s1)]
     (clojure.set/union diff-s1 diff-s2)))
+
+(defn gcd
+  [a,b]
+  (loop [a1 a b1 b]
+    (if (zero? b1)
+      a1
+      (recur b1 (mod a1 b1)))))
+
+(defn lcm-2
+  [a b]
+  (/ (* a b) (gcd a b)))
+
+(defn lcm
+  "Problem 100 - LCM"
+  [& args]
+  (reduce lcm-2 args))

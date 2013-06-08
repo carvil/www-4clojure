@@ -244,3 +244,10 @@
   (= (symmetric-diff #{:a :b :c} #{}) #{:a :b :c}) => true
   (= (symmetric-diff #{} #{4 5 6}) #{4 5 6}) => true
   (= (symmetric-diff #{[1 2] [2 3]} #{[2 3] [3 4]}) #{[1 2] [3 4]}) => true)
+
+(fact "Problem 100 - LCM"
+  (==  (lcm 2 3 6)) => true
+  (==  (lcm 5 3 7 105)) => true
+  (==  (lcm 1/3 2/5 2)) => true
+  (==  (lcm 3/4 1/6 3/2)) => true
+  (==  (lcm 7 5/7 2 3/5 210)) => true)
