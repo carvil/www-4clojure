@@ -251,3 +251,11 @@
   (==  (lcm 1/3 2/5 2)) => true
   (==  (lcm 3/4 1/6 3/2)) => true
   (==  (lcm 7 5/7 2 3/5 210)) => true)
+
+(fact "Problem 63 - Group a sequence"
+  (= (my-group-by #(> % 5) [1 3 6 8]) {false [1 3], true [6 8]}) => true
+  (= (my-group-by #(apply / %) [[1 2] [2 4] [4 6] [3 6]])
+   {1/2 [[1 2] [2 4] [3 6]], 2/3 [[4 6]]}) => true
+  (= (my-group-by count [[1] [1 2] [3] [1 2 3] [2 3]])
+   {1 [[1] [3]], 2 [[1 2] [2 3]], 3 [[1 2 3]]}) => true
+  )

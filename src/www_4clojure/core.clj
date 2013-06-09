@@ -308,3 +308,18 @@
   "Problem 100 - LCM"
   [& args]
   (reduce lcm-2 args))
+
+(defn update-map
+  [f element m]
+  (let [k (f element)
+        current-value (get m k [])
+        new-value (vec (conj current-value element))]
+    (assoc m k new-value)))
+
+(defn my-group-by
+  "Problem 62 - Group a Sequence"
+  [f s]
+  (loop [m {} l s]
+    (if (empty? l)
+      m
+      ( recur (update-map f (first l) m) (rest l)))))
