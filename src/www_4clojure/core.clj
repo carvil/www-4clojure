@@ -323,3 +323,8 @@
     (if (empty? l)
       m
       ( recur (update-map f (first l) m) (rest l)))))
+
+(defn split-by-type [s]
+  "Problem 50 - split by type"
+  (letfn [(to-map [e] {(type e) (conj '() e)})]
+    (vals (reduce #(merge-with concat %1 %2) (map to-map s)))))
