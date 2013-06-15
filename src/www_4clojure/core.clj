@@ -328,3 +328,11 @@
   "Problem 50 - split by type"
   (letfn [(to-map [e] {(type e) (conj '() e)})]
     (vals (reduce #(merge-with concat %1 %2) (map to-map s)))))
+
+
+(defn count-occur
+  "Problem 55 - count occurrences"
+  [s]
+  (let [groups (group-by identity s)]
+    (zipmap (keys groups) (map count (vals groups)))))
+

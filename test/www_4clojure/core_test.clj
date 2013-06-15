@@ -263,3 +263,8 @@
   (= (set (split-by-type [1 :a 2 :b 3 :c])) #{[1 2 3] [:a :b :c]}) => true
   (= (set (split-by-type [:a "foo"  "bar" :b])) #{[:a :b] ["foo" "bar"]}) => true
   (= (set (split-by-type [[1 2] :a [3 4] 5 6 :b])) #{[[1 2] [3 4]] [:a :b] [5 6]}) => true)
+
+(fact "Problem 55 - count occurrences"
+  (= (count-occur [1 1 2 3 2 1 1]) {1 4, 2 2, 3 1}) => true
+  (= (count-occur [:b :a :b :a :b]) {:a 2, :b 3}) => true
+  (= (count-occur '([1 2] [1 3] [1 3])) {[1 2] 1, [1 3] 2}) => true)
