@@ -319,3 +319,9 @@
    #{[1 4] [2 4] [3 4] [1 5] [2 5] [3 5]}) => true
   (= 300 (count (cartesian-product (into #{} (range 10))
                   (into #{} (range 30))))) => true)
+
+(fact "Problem 102 - camel case"
+  (= (camel-case "something") "something") => true
+  (= (camel-case "multi-word-key") "multiWordKey") => true
+  (= (camel-case "leaveMeAlone") "leaveMeAlone") => true)
+

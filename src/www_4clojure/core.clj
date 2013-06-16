@@ -349,3 +349,11 @@
   "Problem 90 - cartesian product"
   [& args]
   (set (reduce #(for [e1 %1 e2 %2] (vector e1 e2)) args)))
+
+
+(defn camel-case
+  "Problem 102 - camel case"
+  [s]
+  (let [[start & more] (clojure.string/split s #"\-")]
+    (apply str (conj (map clojure.string/capitalize more) start))))
+
