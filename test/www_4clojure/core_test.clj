@@ -309,3 +309,13 @@
          #{(do) set contains? nil?}
          #{, , , #_, , empty?}})
    false) => true)
+
+(fact "Problem 90 - cartesian product"
+  (= (cartesian-product #{"ace" "king" "queen"} #{"♠" "♥" "♦" "♣"})
+   #{["ace"   "♠"] ["ace"   "♥"] ["ace"   "♦"] ["ace"   "♣"]
+     ["king"  "♠"] ["king"  "♥"] ["king"  "♦"] ["king"  "♣"]
+     ["queen" "♠"] ["queen" "♥"] ["queen" "♦"] ["queen" "♣"]}) => true
+  (= (cartesian-product #{1 2 3} #{4 5})
+   #{[1 4] [2 4] [3 4] [1 5] [2 5] [3 5]}) => true
+  (= 300 (count (cartesian-product (into #{} (range 10))
+                  (into #{} (range 30))))) => true)

@@ -343,3 +343,9 @@
   (let [elem-lst (mapcat seq s)
         uniq-lst (distinct elem-lst)]
     (= elem-lst uniq-lst)))
+
+
+(defn cartesian-product
+  "Problem 90 - cartesian product"
+  [& args]
+  (set (reduce #(for [e1 %1 e2 %2] (vector e1 e2)) args)))
