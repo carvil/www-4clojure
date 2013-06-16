@@ -268,3 +268,44 @@
   (= (count-occur [1 1 2 3 2 1 1]) {1 4, 2 2, 3 1}) => true
   (= (count-occur [:b :a :b :a :b]) {:a 2, :b 3}) => true
   (= (count-occur '([1 2] [1 3] [1 3])) {[1 2] 1, [1 3] 2}) => true)
+
+(fact "Problem 153 - Pairwise Disjoint Sets"
+  (= (pairwise-disjoint-sets #{#{\U} #{\s} #{\e \R \E} #{\P \L} #{\.}})
+   true) => true
+  (= (pairwise-disjoint-sets #{#{:a :b :c :d :e}
+         #{:a :b :c :d}
+         #{:a :b :c}
+         #{:a :b}
+         #{:a}})
+   false) => true
+  (= (pairwise-disjoint-sets #{#{[1 2 3] [4 5]}
+         #{[1 2] [3 4 5]}
+         #{[1] [2] 3 4 5}
+         #{1 2 [3 4] [5]}})
+   true) => true
+  (= (pairwise-disjoint-sets #{#{'a 'b}
+         #{'c 'd 'e}
+         #{'f 'g 'h 'i}
+         #{''a ''c ''f}})
+   true) => true
+  (= (pairwise-disjoint-sets #{#{'(:x :y :z) '(:x :y) '(:z) '()}
+         #{#{:x :y :z} #{:x :y} #{:z} #{}}
+         #{'[:x :y :z] [:x :y] [:z] [] {}}})
+   false) => true
+  (= (pairwise-disjoint-sets #{#{(= "true") false}
+         #{:yes :no}
+         #{(class 1) 0}
+         #{(symbol "true") 'false}
+         #{(keyword "yes") ::no}
+         #{(class '1) (int \0)}})
+   false) => true
+  (= (pairwise-disjoint-sets #{#{distinct?}
+         #{#(-> %) #(-> %)}
+         #{#(-> %) #(-> %) #(-> %)}
+         #{#(-> %) #(-> %) #(-> %)}})
+   true) => true
+  (= (pairwise-disjoint-sets #{#{(#(-> *)) + (quote mapcat) #_ nil}
+         #{'+ '* mapcat (comment mapcat)}
+         #{(do) set contains? nil?}
+         #{, , , #_, , empty?}})
+   false) => true)

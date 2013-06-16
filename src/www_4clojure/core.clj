@@ -336,3 +336,10 @@
   (let [groups (group-by identity s)]
     (zipmap (keys groups) (map count (vals groups)))))
 
+
+(defn pairwise-disjoint-sets
+  "Problem 153 - Pairwise Disjoint Sets"
+  [s]
+  (let [elem-lst (mapcat seq s)
+        uniq-lst (distinct elem-lst)]
+    (= elem-lst uniq-lst)))
