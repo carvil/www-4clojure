@@ -357,3 +357,10 @@
   (let [[start & more] (clojure.string/split s #"\-")]
     (apply str (conj (map clojure.string/capitalize more) start))))
 
+(defn word-sorting
+  "Problem 70 - word sorting"
+  [s]
+  (sort
+    #(compare (clojure.string/upper-case %1) (clojure.string/upper-case %2))
+    (re-seq #"\w+" s)))
+

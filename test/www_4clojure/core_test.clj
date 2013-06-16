@@ -325,3 +325,10 @@
   (= (camel-case "multi-word-key") "multiWordKey") => true
   (= (camel-case "leaveMeAlone") "leaveMeAlone") => true)
 
+(fact "Problem 70 - word sorting"
+  (= (word-sorting  "Have a nice day.")
+   ["a" "day" "Have" "nice"]) => true
+  (= (word-sorting  "Clojure is a fun language!")
+   ["a" "Clojure" "fun" "is" "language"]) => true
+  (= (word-sorting  "Fools fall for foolish follies.")
+   ["fall" "follies" "foolish" "Fools" "for"]) => true)
