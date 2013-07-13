@@ -337,3 +337,9 @@
   (pascal-line 1) => [1]
   (map pascal-line (range 1 6)) => [[1] [1 1] [1 2 1] [1 3 3 1] [1 4 6 4 1]]
   (pascal-line 11) => [1 10 45 120 210 252 210 120 45 10 1])
+
+(fact "Problem 56 - My distinct"
+  (my-distinct [1 2 1 3 1 2 4]) => [1 2 3 4]
+  (my-distinct [:a :a :b :b :c :c]) => [:a :b :c]
+  (my-distinct '([2 4] [1 2] [1 3] [1 3])) => '([2 4] [1 2] [1 3])
+  (my-distinct (range 50)) => (range 50))

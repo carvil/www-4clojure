@@ -373,3 +373,7 @@
     (if (> k n)
       res
       (recur (f prev-k k n) (+ k 1) n (conj res (f prev-k k n)))))))
+
+(defn my-distinct [s]
+  "Problem 56 - my distinct"
+  (sort-by #(.indexOf s %) (into (empty s) (into #{} s))))
