@@ -364,3 +364,12 @@
     #(compare (clojure.string/upper-case %1) (clojure.string/upper-case %2))
     (re-seq #"\w+" s)))
 
+(defn pascal-line [limit]
+  "Problem 97 - Pascal's Triangle (calculating row by itself by following an
+   alrorithm which doesn't require  computing other elements or factorials."
+  (letfn [(f [k-1 k n]
+          (long (* k-1 (/ (+ n (- 1 k)) k))))]
+    (loop [prev-k 1, k 1, n (- limit 1), res [1]]
+    (if (> k n)
+      res
+      (recur (f prev-k k n) (+ k 1) n (conj res (f prev-k k n)))))))
